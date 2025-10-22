@@ -4,7 +4,7 @@
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
         <img
-          src="assets/img/profile/profile-bg-me-black-long-hair.png"
+          src="assets/img/profile/profile-bg-me-black-hoodie-on.png"
           alt=""
           data-aos="fade-in"
         />
@@ -12,12 +12,12 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-              <h2>Hi, I'm Jayson Lauza</h2>
+              <h2>Hi, I'm <?php echo $fullName; ?></h2>
               <p>
                 I'm a
                 <span
                   class="typed"
-                  data-typed-items="Web Developer, Software Developer, Full-stack (React/Next.js) Developer, WordPress Developer, Musician/Drummer"
+                  data-typed-items="<?php echo $jobTitle; ?>"
                 ></span><span class="typed-cursor" aria-hidden="true"></span>
               </p>
               <div class="social-links">
@@ -53,14 +53,14 @@
                 <div class="profile-header">
                   <div class="profile-avatar">
                     <img
-                      src="assets/img/profile/profile-square-3.webp"
+                      src="assets/img/profile/profile-2.png"
                       class="img-fluid"
                       alt=""
                     />
                     <div class="status-indicator"></div>
                   </div>
-                  <h3>Jordan Mitchell</h3>
-                  <span class="role">Full Stack Developer</span>
+                  <h3><?php echo $fullName; ?></h3>
+                  <span class="role"><?php echo $jobTitle; ?></span>
                   <div class="rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
