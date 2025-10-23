@@ -42,7 +42,7 @@ require_once('config.php');
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="">
+  <body class="index-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"

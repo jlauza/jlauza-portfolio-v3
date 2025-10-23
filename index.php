@@ -39,9 +39,7 @@
           <span class="subtitle">About Me</span>
           <h2>About Me</h2>
           <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+            I help businesses build functional, reliable, and cost-efficient web solutions that meet their goals without unnecessary complexity. Every project is designed around your needs, delivered on time, within budget, and ready to scale as your business grows.
           </p>
         </div>
         <!-- End Section Title -->
