@@ -1,6 +1,8 @@
 <?php
 $siteName = ".initiadev";
 $fullName = "Jayson Lauza";
+$firstName = "Jayson";
+$lastName = "Lauza";
 $jobTitle = "Web Developer, Software Developer, Full-stack (React/Next.js) Developer, WordPress Developer, Musician/Drummer";
 $email = "lauzajayson@gmail.com";
 $phone = "+63 951 314 7421";
