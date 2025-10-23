@@ -1,0 +1,4 @@
+[[command]]
+name = "web"
+module = "php-wasmer"
+entrypoint = "index.php"
