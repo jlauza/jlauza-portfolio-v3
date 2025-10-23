@@ -1,4 +1,4 @@
-<?php require_once 'header.php'; ?>
+<?php require_once 'single-header.php'; ?>
   <main class="main">
 
     <!-- Page Title -->

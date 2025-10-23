@@ -1,12 +1,9 @@
-<?php
-require_once('config.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title><?php echo $siteName; ?></title>
+    <title>Service Details - Craftivo Bootstrap Template</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -40,27 +37,35 @@ require_once('config.php');
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Craftivo
+  * Template URL: https://bootstrapmade.com/craftivo-bootstrap-portfolio-template/
+  * Updated: Oct 04 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
 
   <body class="">
-    <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename"><?php echo $siteName; ?></h1>
+          <h1 class="sitename">Craftivo</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li class="dropdown d-none">
+            <li class="dropdown">
               <a href="#"
                 ><span>Dropdown</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i
