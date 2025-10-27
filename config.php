@@ -1,11 +1,13 @@
 <?php
-$siteName = ".initiadev";
+$siteName = "initiadev";
 $fullName = "Jayson Lauza";
 $firstName = "Jayson";
 $lastName = "Lauza";
 $jobTitle = "Web Developer, Software Developer, Full-stack (React/Next.js) Developer, WordPress Developer, Musician/Drummer";
+$yearsOfExperience = date("Y") - 2012;
 $email = "lauzajayson@gmail.com";
 $phone = "+63 951 314 7421";
+$location = "Philippines";
 $availability = "Open to Work";
 $education = [
     [
@@ -25,18 +27,19 @@ $education = [
     ]
 ];
 $skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "PHP",
-    "React",
-    "Next.js",
-    "WordPress",
-    "MySQL",
-    "Git",
-    "Bootstrap",
-    "Tailwind CSS",
-    "MongoDB"
+    "HTML & CSS" => 95,
+    "JavaScript & TypeScript" => 85,
+    "PHP & SQL" => 90,
+    "React & Next.js" => 80,
+    "Node.js & Express" => 85,
+    "WordPress" => 95,
+    "Git" => 75,
+    "Bootstrap" => 85,
+    "Tailwind CSS" => 70,
+    "MongoDB" => 88,
+    "Redis" => 74,
+    "Docker" => 80,
+    "UI/UX Design (Canva & Photoshop)" => 88
 ];
 $services = [
     "Web Development",

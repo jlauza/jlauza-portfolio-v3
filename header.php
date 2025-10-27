@@ -49,7 +49,7 @@ require_once('config.php');
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <img src="assets/img/logo-initiadev-dark-no-bg.png" alt="" class="w-full">
           <h1 class="sitename"><?php echo $siteName; ?></h1>
         </a>
 

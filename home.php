@@ -59,7 +59,7 @@
                   </div>
                   <h3><?php echo $fullName; ?></h3>
                   <span class="role"><?php echo $jobTitle; ?></span>
-                  <div class="rating">
+                  <div class="rating d-none">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -69,13 +69,13 @@
                   </div>
                 </div>
 
-                <div class="profile-stats">
+                <div class="profile-stats d-none">
                   <div class="stat-item">
                     <h4>156</h4>
                     <p>Projects</p>
                   </div>
                   <div class="stat-item">
-                    <h4>8+</h4>
+                    <h4>10+</h4>
                     <p>Years</p>
                   </div>
                   <div class="stat-item">
@@ -108,16 +108,10 @@
                   <div class="section-tag">About Me</div>
                   <h2>Transforming Ideas into Digital Reality</h2>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint
-                    occaecati cupiditate non provident, similique sunt in culpa
-                    qui officia deserunt mollitia animi.
+                    Your vision deserves more than just a template. It needs innovation, precision, and world-class engineering. I specialize in turning concepts into fully functional digital products through expert web development, software engineering, and app creation. Whether you're launching a startup, modernizing your business, or building the next big platform, I design and develop custom digital solutions that are fast, secure, and built to scale.
                   </p>
                   <p>
-                    Temporibus autem quibusdam et aut officiis debitis aut rerum
-                    necessitatibus saepe eveniet ut et voluptates repudiandae
-                    sint et molestiae non recusandae.
+                    From UI/UX design and front-end development to backend architecture, databases, and cloud integration, I deliver end-to-end services that bring your ideas to life with technical excellence and real business impact.
                   </p>
                 </div>
 
@@ -130,7 +124,7 @@
                     <i class="bi bi-briefcase"></i>
                     <div class="detail-content">
                       <span>Experience</span>
-                      <strong>8+ Years</strong>
+                      <strong><?php echo $yearsOfExperience; ?> Years</strong>
                     </div>
                   </div>
 
@@ -141,8 +135,8 @@
                   >
                     <i class="bi bi-mortarboard"></i>
                     <div class="detail-content">
-                      <span>Degree</span>
-                      <strong>Master of Science</strong>
+                      <span>Expertise</span>
+                      <strong><?php echo $education[1]['degree']; ?></strong>
                     </div>
                   </div>
 
@@ -154,7 +148,7 @@
                     <i class="bi bi-geo-alt"></i>
                     <div class="detail-content">
                       <span>Based In</span>
-                      <strong>Portland, OR</strong>
+                      <strong><?php echo $location; ?></strong>
                     </div>
                   </div>
 
@@ -166,7 +160,7 @@
                     <i class="bi bi-envelope"></i>
                     <div class="detail-content">
                       <span>Email</span>
-                      <strong>contact@example.com</strong>
+                      <strong><?php echo $email; ?></strong>
                     </div>
                   </div>
 
@@ -175,10 +169,10 @@
                     data-aos="fade-up"
                     data-aos-delay="150"
                   >
-                    <i class="bi bi-phone"></i>
+                    <i class="bi bi-whatsapp"></i>
                     <div class="detail-content">
-                      <span>Phone</span>
-                      <strong>+1 (555) 234-5678</strong>
+                      <span>WhatsApp</span>
+                      <strong><?php echo $phone; ?></strong>
                     </div>
                   </div>
 
@@ -206,14 +200,46 @@
                   <div class="skills-list skills-animation">
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">React &amp; Next.js</span>
-                        <span class="skill-percent">95%</span>
+                        <span class="skill-name">HTML & CSS</span>
+                        <span class="skill-percent"><?= $skills['HTML & CSS'] ?>%</span>
                       </div>
                       <div class="progress">
                         <div
                           class="progress-bar"
                           role="progressbar"
-                          aria-valuenow="95"
+                          aria-valuenow="<?= $skills['HTML & CSS']; ?>"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">JavaScript & TypeScript</span>
+                        <span class="skill-percent"><?= $skills['JavaScript & TypeScript'] ?>%</span>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="<?= $skills['JavaScript & TypeScript']; ?>"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">React &amp; Next.js</span>
+                        <span class="skill-percent"><?= $skills['React & Next.js'] ?>%</span>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="<?= $skills['React & Next.js']; ?>"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         ></div>
@@ -223,13 +249,13 @@
                     <div class="skill-item">
                       <div class="skill-info">
                         <span class="skill-name">Node.js &amp; Express</span>
-                        <span class="skill-percent">90%</span>
+                        <span class="skill-percent"><?= $skills['Node.js & Express'] ?>%</span>
                       </div>
                       <div class="progress">
                         <div
                           class="progress-bar"
                           role="progressbar"
-                          aria-valuenow="90"
+                          aria-valuenow="<?= $skills['Node.js & Express']; ?>"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         ></div>
@@ -238,14 +264,14 @@
 
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">UI/UX &amp; Figma</span>
-                        <span class="skill-percent">88%</span>
+                        <span class="skill-name">UI/UX. Canva &amp; Photoshop</span>
+                        <span class="skill-percent"><?= $skills['UI/UX Design (Canva & Photoshop)'] ?>%</span>
                       </div>
                       <div class="progress">
                         <div
                           class="progress-bar"
                           role="progressbar"
-                          aria-valuenow="88"
+                          aria-valuenow="<?= $skills['UI/UX Design (Canva & Photoshop)']; ?>"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         ></div>
@@ -254,14 +280,14 @@
 
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">MongoDB &amp; PostgreSQL</span>
-                        <span class="skill-percent">85%</span>
+                        <span class="skill-name">MongoDB &amp; Redis</span>
+                        <span class="skill-percent"><?= $skills['MongoDB'] ?>%</span>
                       </div>
                       <div class="progress">
                         <div
                           class="progress-bar"
                           role="progressbar"
-                          aria-valuenow="85"
+                          aria-valuenow="<?= $skills['MongoDB']; ?>"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         ></div>
@@ -270,14 +296,30 @@
 
                     <div class="skill-item">
                       <div class="skill-info">
-                        <span class="skill-name">Docker &amp; AWS</span>
-                        <span class="skill-percent">80%</span>
+                        <span class="skill-name">PHP &amp; SQL</span>
+                        <span class="skill-percent"><?= $skills['PHP & SQL'] ?>%</span>
                       </div>
                       <div class="progress">
                         <div
                           class="progress-bar"
                           role="progressbar"
-                          aria-valuenow="80"
+                          aria-valuenow="<?= $skills['PHP & SQL']; ?>"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-percent"><?= $skills['Docker'] ?>%</span>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="<?= $skills['Docker']; ?>"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         ></div>
@@ -299,9 +341,7 @@
           <span class="subtitle">Resume</span>
           <h2>Resume</h2>
           <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+            Innovative Web and Software Developer with a track record of delivering high-performance applications and custom digital solutions. Skilled in full-stack development, API integration, and automation. Committed to helping businesses scale through clean code, optimized performance, and forward-thinking engineering.
           </p>
         </div>
         <!-- End Section Title -->
@@ -319,14 +359,38 @@
                     <span class="section-badge">Experience</span>
                     <h2>Professional Journey</h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                     I started my career with a passion for building digital products and have grown into a skilled web and software developer. Over time, I’ve worked on projects that focus on functionality, performance, and user experience turning ideas into real, scalable solutions.
                     </p>
                   </div>
                 </div>
 
                 <div class="experience-cards">
+                   <div
+                    class="exp-card featured"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  >
+                    <div class="card-header">
+                      <div class="company-logo">
+                        <i class="bi bi-buildings"></i>
+                      </div>
+                      <div class="period-badge">Current</div>
+                    </div>
+                    <div class="card-body">
+                      <h3>Technical Consultant</h3>
+                      <p class="company-name">Fantasy Aerial Arts</p>
+                      <span class="duration">2025 - Present</span>
+                      <p class="description">
+                        I provided technical consulting services for an aerial arts and retreat company based in Australia.
+                      </p>
+                      <div class="skills-tags">
+                        <span class="skill-tag">Technical Consultant</span>
+                        <span class="skill-tag">Workflow Builder</span>
+                        <span class="skill-tag">Workflow Automation</span>
+                      </div>
+                    </div>
+                  </div>
+
                   <div
                     class="exp-card featured"
                     data-aos="zoom-in"
@@ -339,18 +403,16 @@
                       <div class="period-badge">Current</div>
                     </div>
                     <div class="card-body">
-                      <h3>Senior Creative Director</h3>
-                      <p class="company-name">Digital Innovation Labs</p>
-                      <span class="duration">2023 - Present</span>
+                      <h3>Lead Web Developer</h3>
+                      <p class="company-name">Owna Group Interiors, Ltd.</p>
+                      <span class="duration">2025 - Present</span>
                       <p class="description">
-                        Ut enim ad minim veniam quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        duis aute.
+                       I led the website development under WordPress for a real estate company based in London, UK.
                       </p>
                       <div class="skills-tags">
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Strategy</span>
-                        <span class="skill-tag">Innovation</span>
+                        <span class="skill-tag">Web Development Lead</span>
+                        <span class="skill-tag">Website Consultant</span>
+                        <span class="skill-tag">WordPress Developer</span>
                       </div>
                     </div>
                   </div>
@@ -362,14 +424,19 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <h3>Product Design Lead</h3>
-                      <p class="company-name">TechForward Solutions</p>
-                      <span class="duration">2020 - 2023</span>
+                      <h3>Fullstack React Developer</h3>
+                      <p class="company-name">N-LITE Sports</p>
+                      <span class="duration">2022 - 2024</span>
                       <p class="description">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium totam rem
-                        aperiam.
+                        I joined a team of software developer to build a profiling app for athletes, teams and managers. Collaborated with cross-functional teams to deliver high quality web-based software.
                       </p>
+                      <div class="skills-tags">
+                        <span class="skill-tag">React & Next.js</span>
+                        <span class="skill-tag">Frontend Development</span>
+                        <span class="skill-tag">Docker and Containerization</span>
+                        <span class="skill-tag">Backend Development</span>
+                        <span class="skill-tag">API integration</span>
+                      </div>
                     </div>
                   </div>
 
@@ -380,13 +447,40 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <h3>UX Designer</h3>
-                      <p class="company-name">Creative Studio Inc</p>
-                      <span class="duration">2017 - 2020</span>
+                      <h3>Website Developer and Support</h3>
+                      <p class="company-name">Leader Publishing Worldwide</p>
+                      <span class="duration">2019 - 2024</span>
                       <p class="description">
-                        Excepteur sint occaecat cupidatat non proident sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Provided website development and maintenance services for various business coaching clients, ensuring optimal performance and user experience built under WordPress and custom PHP
                       </p>
+                       <div class="skills-tags">
+                        <span class="skill-tag">WordPress Development</span>
+                        <span class="skill-tag">Maintenance & Support</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">PHP & Database Management</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="exp-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card-header">
+                      <div class="company-logo">
+                        <i class="bi bi-palette"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3>Website Lead Developer and Technical Consultant</h3>
+                      <p class="company-name">Fantasy Fitness and Dance</p>
+                      <span class="duration">2012 - 2025</span>
+                      <p class="description">
+                        Website lead developer for a fitness and dance company based in Australia. Responsible for website development, maintenance, and technical consulting using custom PHP solutions.
+                      </p>
+                       <div class="skills-tags">
+                        <span class="skill-tag">Frontend Development</span>
+                        <span class="skill-tag">Backend Development</span>
+                        <span class="skill-tag">Maintenance and Support</span>
+                        <span class="skill-tag">PHP & Database Management</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -404,8 +498,7 @@
                     <span class="section-badge">Education</span>
                     <h2>Academic Background</h2>
                     <p>
-                      Quis autem vel eum iure reprehenderit qui in ea voluptate
-                      velit esse quam nihil molestiae consequatur vel illum.
+                      I built a strong foundation in technology through formal education and hands-on training, focusing on software development, programming principles, and modern web technologies.
                     </p>
                   </div>
                 </div>
@@ -422,16 +515,15 @@
                       </div>
                       <div class="timeline-content">
                         <div class="education-meta">
-                          <span class="year-range">2015 - 2017</span>
-                          <span class="degree-level">Masters</span>
+                          <span class="year-range">2016 - 2018</span>
+                          <span class="degree-level d-none">Associates</span>
                         </div>
-                        <h4>Master of Design Innovation</h4>
-                        <p class="institution">Institute of Creative Arts</p>
+                        <h4>Software Development</h4>
+                        <p class="institution">AMA Computer Learning Center</p>
                         <p class="description">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit sed do eiusmod tempor incididunt ut labore.
+                          The study focused on advanced software development methodologies, programming languages, and project management techniques to prepare for a career in software engineering.
                         </p>
-                        <div class="achievement">
+                        <div class="achievement d-none">
                           <i class="bi bi-award"></i>
                           <span>Summa Cum Laude</span>
                         </div>
@@ -444,14 +536,13 @@
                       </div>
                       <div class="timeline-content">
                         <div class="education-meta">
-                          <span class="year-range">2011 - 2015</span>
+                          <span class="year-range">2025 - In Progress</span>
                           <span class="degree-level">Bachelor</span>
                         </div>
-                        <h4>Bachelor of Fine Arts</h4>
-                        <p class="institution">Creative Arts University</p>
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <p class="institution">AMA University</p>
                         <p class="description">
-                          Duis aute irure dolor in reprehenderit in voluptate
-                          velit esse cillum dolore eu fugiat nulla pariatur.
+                          The program covers core computer science concepts including programming, data structures, algorithms, databases, and software engineering principles to prepare for a career in technology.
                         </p>
                       </div>
                     </div>
@@ -462,22 +553,22 @@
                       </div>
                       <div class="timeline-content">
                         <div class="education-meta">
-                          <span class="year-range">2016 - 2023</span>
+                          <span class="year-range">2016 - <?php echo date("Y"); ?></span>
                           <span class="degree-level">Certificates</span>
                         </div>
                         <h4>Professional Certifications</h4>
                         <div class="certifications-list">
                           <div class="cert-item">
-                            <span class="cert-name">Advanced UX Research</span>
-                            <span class="cert-year">2023</span>
+                            <span class="cert-name">From Relational Model (SQL) to MongoDB's Document Model</span>
+                            <span class="cert-year">2025</span>
                           </div>
                           <div class="cert-item">
-                            <span class="cert-name">Design Leadership</span>
-                            <span class="cert-year">2022</span>
+                            <span class="cert-name">CRUD Operations in MongoDB</span>
+                            <span class="cert-year">2025</span>
                           </div>
                           <div class="cert-item">
-                            <span class="cert-name">Digital Strategy</span>
-                            <span class="cert-year">2021</span>
+                            <span class="cert-name">MongoDB Advanced Schema Design Patterns and Anti-patterns Skill Badge</span>
+                            <span class="cert-year">2025</span>
                           </div>
                         </div>
                       </div>
@@ -498,9 +589,7 @@
           <span class="subtitle">Services</span>
           <h2>Services</h2>
           <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+            I develop custom web, app, and software solutions designed to solve your challenges, streamline your operations, and help your business grow faster and smarter.
           </p>
         </div>
         <!-- End Section Title -->
@@ -533,8 +622,8 @@
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-              <div class="service-item featured">
-                <div class="featured-tag">Featured</div>
+              <div class="service-item">
+                <!-- <div class="featured-tag">Featured</div> -->
                 <div class="icon-wrapper">
                   <i class="bi bi-layout-text-window-reverse"></i>
                 </div>
@@ -576,7 +665,8 @@
               data-aos="zoom-in"
               data-aos-delay="400"
             >
-              <div class="service-item">
+              <div class="service-item featured">
+                <div class="featured-tag">Soon</div>
                 <div class="icon-wrapper">
                   <i class="bi bi-phone"></i>
                 </div>
